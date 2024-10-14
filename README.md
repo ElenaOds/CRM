@@ -1,5 +1,5 @@
 ## User management systen
-A web-application which allows to get the list of users and search for specific user by different parameters
+A web-application which allows to get the list of users
 
 [Link to live page](crm-tau-roan.vercel.app/crm)
 
