@@ -1,7 +1,7 @@
 ## User management systen
 A web-application which allows to get the list of users
 
-[Link to live page](crm-tau-roan.vercel.app/)
+[Link to live page](https://crm-tau-roan.vercel.app/)
 
 ### Technologies used:
 <ul>
