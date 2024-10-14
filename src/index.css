@@ -12,8 +12,7 @@
 
 body {
   margin: 0;
-  background-color: var(--bgd-color);
-  color: var(--text-color);
+  color: #111827;  
 }
 
 a {
@@ -34,3 +33,219 @@ p {
   padding: 0;
 }
 
+.nav-link.active {
+  background-color: #1D4ED8; 
+  color: white;
+}
+
+.sibebar {
+  background-color: #111827; 
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+}
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.main-margin {
+  @media screen and (min-width: 1200px) {
+    margin-left: 260px;
+}
+}
+
+.user-wrapper {
+  gap: 8px;
+}
+
+.user-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -16px;
+  width: 1px;
+  height: 100%;
+  background-color: #D1D5DB;
+}
+
+@media screen and (min-width: 768px) {
+  .user-wrapper {
+    gap: 10px;
+  }
+  .user-wrapper::before {
+    left: -18px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .user-wrapper {
+    gap: 12px;
+  }
+  .user-wrapper::before {
+    left: -20px;
+  }
+}
+
+.styled-header {
+  padding: 14px 20px;
+  border-bottom: 1px solid #D1D5DB;
+
+
+@media screen and (min-width: 768px) {
+    padding: 22px 32px;
+}
+
+@media screen and (min-width: 1200px) {
+    margin-left: 240px;
+    padding: 28px 40px;
+  }
+}
+
+.avatar {
+  width: 28px;
+
+  @media screen and (min-width: 768px) {
+      width: 38px;
+  }
+  @media screen and (min-width: 1200px) {
+      width: 44px;
+  }
+}
+
+.modal-btn {
+  display: block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  margin-left: 10px;
+
+@media screen and (min-width: 1200px) {
+  display: none;
+}
+}
+
+.modal-btn:hover,
+.modal-btn:focus {
+  outline: none;
+  box-shadow: none; 
+}
+
+.first-line, .second-line, .third-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: var(--text-color);
+  border-radius: 1px;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-line {
+  top: 0;
+}
+
+.second-line {
+  top: 7px;
+}
+
+.third-line {
+  top: 14px;
+}
+
+.modal-btn.isOpen .first-line {
+  transform: rotate(45deg);
+  top: 7px;
+}
+
+.modal-btn.isOpen .second-line {
+  opacity: 0;
+}
+
+.modal-btn.isOpen .third-line {
+  top: 7px;
+  transform: rotate(-45deg);
+}
+
+.first-line, .second-line, .third-line {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #111827;
+  border-radius: 1px;
+  height: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+.first-line {
+  top: 0;
+}
+
+.second-line {
+  top: 7px;
+}
+
+.third-line {
+  top: 14px;
+}
+
+.table-row {
+  cursor: pointer;
+}
+
+.table-row:hover .table-cell,
+.table-row:focus .table-cell {
+  background-color: #1D4ED8;
+  color: #fff;
+}
+
+.table-cell,
+.table-head {
+  font-size: 8px;
+
+  @media screen and (min-width: 480px) {
+    font-size: 10px;
+}
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+}
+
+@media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}
+
+.overlay {
+  display: flex;
+  top: 56px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #111827;
+  z-index: 100;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+
+  @media screen and (min-width: 768px) {
+    top: 82px;
+    padding: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+
+  &.isOpen {
+    transform: translateX(0);
+  }
+}
